@@ -1,0 +1,84 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply bg-black text-white antialiased;
+  }
+
+  * {
+    @apply border-slate-800;
+  }
+}
+
+@layer utilities {
+  .text-gradient {
+    @apply bg-clip-text text-transparent bg-gradient-to-r from-teal-400 via-emerald-400 to-sky-400;
+  }
+
+  .text-gradient-alt {
+    @apply bg-clip-text text-transparent bg-gradient-to-r from-emerald-400 via-teal-400 to-sky-400;
+  }
+
+  .glow {
+    @apply shadow-[0_0_30px_rgba(20,184,166,0.3)];
+  }
+
+  .glow-emerald {
+    @apply shadow-[0_0_30px_rgba(16,185,129,0.3)];
+  }
+
+  .glow-sky {
+    @apply shadow-[0_0_30px_rgba(14,165,233,0.3)];
+  }
+
+  .glow-strong {
+    @apply shadow-[0_0_50px_rgba(20,184,166,0.5)];
+  }
+
+  .border-gradient {
+    @apply border border-transparent bg-gradient-to-r from-teal-500/20 via-emerald-500/20 to-sky-500/20 bg-origin-border;
+  }
+
+  .bg-gradient-brand {
+    @apply bg-gradient-to-r from-teal-500 via-emerald-500 to-sky-500;
+  }
+
+  .bg-gradient-brand-alt {
+    @apply bg-gradient-to-r from-emerald-500 via-teal-500 to-sky-500;
+  }
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #0a0a0a;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #334155;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #475569;
+}
+
+/* Smooth gradient animations */
+@keyframes gradient-shift {
+  0%, 100% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+}
+
+.animate-gradient-shift {
+  background-size: 200% 200%;
+  animation: gradient-shift 8s ease infinite;
+}
