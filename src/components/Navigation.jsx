@@ -16,8 +16,8 @@ const Navigation = () => {
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
           <div className="flex-shrink-0">
-            <a href="/" className="text-2xl font-bold text-gradient">
-              Comm360
+            <a href="/" className="flex items-center">
+              <img src="/logo.png" alt="Comm360" className="h-12 md:h-16 w-auto" />
             </a>
           </div>
 
