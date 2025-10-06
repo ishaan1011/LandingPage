@@ -24,40 +24,6 @@ const Hero = () => {
       </div>
 
       <div className="relative z-10 max-w-7xl mx-auto px-6 lg:px-8 text-center">
-        {/* Floating UI cards */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 0.8, duration: 0.6 }}
-          className="absolute top-20 left-10 hidden lg:block"
-        >
-          <div className="bg-slate-900/80 backdrop-blur-sm border border-slate-700 rounded-lg px-4 py-2 text-sm">
-            <span className="text-green-400">●</span> Meeting joined
-          </div>
-        </motion.div>
-
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 1, duration: 0.6 }}
-          className="absolute top-40 right-10 hidden lg:block"
-        >
-          <div className="bg-slate-900/80 backdrop-blur-sm border border-slate-700 rounded-lg px-4 py-2 text-sm">
-            <span className="text-blue-400">⚡</span> Transcribing in real-time...
-          </div>
-        </motion.div>
-
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 1.2, duration: 0.6 }}
-          className="absolute bottom-40 left-20 hidden lg:block"
-        >
-          <div className="bg-slate-900/80 backdrop-blur-sm border border-slate-700 rounded-lg px-4 py-2 text-sm">
-            <span className="text-purple-400">✓</span> Action items ready
-          </div>
-        </motion.div>
-
         {/* Main content */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}
