@@ -19,9 +19,9 @@ const Footer = () => {
   return (
     <footer className="relative border-t border-slate-800 bg-black">
       <div className="max-w-4xl mx-auto px-6 lg:px-8 py-16">
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-12 mb-12">
+        <div className="flex flex-col md:flex-row md:justify-center md:items-start gap-12 md:gap-20 mb-12">
           {/* Logo & Description */}
-          <div className="col-span-2 md:col-span-1">
+          <div>
             <a href="/" className="text-2xl font-bold text-gradient mb-4 inline-block">
               Comm360
             </a>
