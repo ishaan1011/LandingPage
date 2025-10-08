@@ -15,12 +15,12 @@ const TrustLine = () => {
           transition={{ duration: 0.6 }}
         >
           <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6">
-            Others give you meetings.
+            The future of communication.
             <br />
-            <span className="text-gradient">We give you results.</span>
+            <span className="text-gradient">Beyond language and time.</span>
           </h2>
           <p className="text-xl text-slate-400 max-w-2xl mx-auto">
-            Trusted by teams who refuse to waste time in back-to-back calls.
+            Where teams connect, collaborate, and create without limits.
           </p>
         </motion.div>
 
@@ -33,7 +33,7 @@ const TrustLine = () => {
         >
           {/* Placeholder for company logos */}
           <div className="text-slate-600 text-sm font-medium uppercase tracking-wider">
-            Built for remote-first teams
+            Empowering smarter collaboration.
           </div>
         </motion.div>
       </div>

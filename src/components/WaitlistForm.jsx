@@ -7,6 +7,7 @@ const WaitlistForm = () => {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true, margin: "-100px" });
   const [submitted, setSubmitted] = useState(false);
+  const [error, setError] = useState('');
   const [formData, setFormData] = useState({
     name: '',
     email: '',
@@ -14,17 +15,48 @@ const WaitlistForm = () => {
     useCase: ''
   });
 
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    // Handle form submission here
-    console.log('Form submitted:', formData);
-    setSubmitted(true);
+  const FORMSPREE_ENDPOINT = import.meta.env.VITE_FORMSPREE_ENDPOINT || 'https://formspree.io/f/xdkwllee';
 
-    // Reset after 3 seconds
-    setTimeout(() => {
-      setSubmitted(false);
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    setError('');
+
+    if (!FORMSPREE_ENDPOINT) {
+      console.warn('VITE_FORMSPREE_ENDPOINT is not set. Unable to submit form.');
+      setError('Submission is temporarily unavailable. Please try again later.');
+      return;
+    }
+
+    try {
+      const response = await fetch(FORMSPREE_ENDPOINT, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+          'Accept': 'application/json'
+        },
+        body: JSON.stringify({
+          _subject: '🚨 IMP FROM COMM360 — New Waitlist Submission 🚨',
+          name: formData.name,
+          email: formData.email,
+          company: formData.company,
+          useCase: formData.useCase,
+        })
+      });
+
+      if (!response.ok) {
+        throw new Error('Failed to submit');
+      }
+
+      setSubmitted(true);
       setFormData({ name: '', email: '', company: '', useCase: '' });
-    }, 3000);
+
+      // Reset success message after 3 seconds
+      setTimeout(() => {
+        setSubmitted(false);
+      }, 3000);
+    } catch (err) {
+      setError('Something went wrong. Please try again.');
+    }
   };
 
   const handleChange = (e) => {
@@ -89,6 +121,11 @@ const WaitlistForm = () => {
             ) : (
               // Form
               <form onSubmit={handleSubmit} className="relative space-y-6">
+                {error && (
+                  <div className="text-red-400 text-sm bg-red-500/10 border border-red-500/30 rounded-lg p-3">
+                    {error}
+                  </div>
+                )}
                 <div className="grid md:grid-cols-2 gap-6">
                   {/* Full Name */}
                   <div>

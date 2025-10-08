@@ -7,8 +7,8 @@ const steps = [
   {
     number: "01",
     icon: Calendar,
-    title: "Connect your calendar",
-    description: "AI syncs with your schedule automatically. No manual setup, no configuration headaches."
+    title: "Start your meeting",
+    description: "Host or join directly on the platform. No integrations, no extra tools — everything happens in one place."
   },
   {
     number: "02",

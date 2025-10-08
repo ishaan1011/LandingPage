@@ -1,4 +1,4 @@
-import { Twitter, Linkedin, Github } from 'lucide-react';
+import { Linkedin } from 'lucide-react';
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
@@ -24,9 +24,7 @@ const Footer = () => {
   };
 
   const socialLinks = [
-    { icon: Twitter, href: '#', label: 'Twitter' },
-    { icon: Linkedin, href: '#', label: 'LinkedIn' },
-    { icon: Github, href: '#', label: 'GitHub' },
+    { icon: Linkedin, href: 'https://www.linkedin.com/company/comm360ai', label: 'LinkedIn' },
   ];
 
   return (
@@ -113,9 +111,6 @@ const Footer = () => {
         <div className="pt-8 border-t border-slate-800 flex flex-col md:flex-row items-center justify-between gap-4">
           <p className="text-slate-500 text-sm">
             © {currentYear} Comm360. All rights reserved.
-          </p>
-          <p className="text-slate-500 text-sm">
-            Built with ❤️ for remote teams everywhere
           </p>
         </div>
       </div>

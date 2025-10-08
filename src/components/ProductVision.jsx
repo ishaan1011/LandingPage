@@ -26,12 +26,12 @@ const ProductVision = () => {
               Your AI avatar joins, listens, contributes insights, and turns conversations into action.
             </p>
             <p className="text-lg md:text-xl text-slate-300 leading-relaxed">
-              Across Zoom, Google Meet, Teams, and Slack. In any language. From anywhere.
+              With Comm360, communication happens seamlessly in one place. In any language. From anywhere.
             </p>
             <div className="pt-4 flex flex-wrap gap-4">
               <div className="flex items-center gap-2 text-slate-400">
                 <div className="w-1.5 h-1.5 bg-cyan-400 rounded-full" />
-                <span>Works with all major platforms</span>
+                <span>Meetings reimagined</span>
               </div>
               <div className="flex items-center gap-2 text-slate-400">
                 <div className="w-1.5 h-1.5 bg-cyan-400 rounded-full" />

@@ -25,7 +25,7 @@ const Hero = () => {
 
       <div className="relative z-10 max-w-7xl mx-auto px-6 lg:px-8 text-center">
         {/* Main content */}
-        <motion.div
+          <motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
@@ -58,10 +58,10 @@ const Hero = () => {
             transition={{ delay: 0.6, duration: 0.8 }}
             className="flex flex-col sm:flex-row items-center justify-center gap-4"
           >
-            <button className="group px-8 py-4 bg-gradient-brand rounded-xl font-semibold text-lg hover:shadow-2xl hover:glow-strong transition-all hover:scale-105 flex items-center gap-2">
+            <a href="#waitlist" className="group px-8 py-4 bg-gradient-brand rounded-xl font-semibold text-lg hover:shadow-2xl hover:glow-strong transition-all hover:scale-105 flex items-center gap-2" role="button">
               Join the Waitlist
               <ArrowRight className="group-hover:translate-x-1 transition-transform" size={20} />
-            </button>
+            </a>
             <button className="group px-8 py-4 bg-slate-800/50 hover:bg-slate-800 border border-slate-700 rounded-xl font-semibold text-lg transition-all flex items-center gap-2">
               <Play size={20} />
               Watch Demo
@@ -80,9 +80,9 @@ const Hero = () => {
               <span>Early access opening soon</span>
             </div>
             <div>•</div>
-            <div>Join 1,000+ on the waitlist</div>
+            <div>Join the waitlist</div>
             <div>•</div>
-            <div>No credit card required</div>
+            <div>Try it for free</div>
           </motion.div>
         </motion.div>
       </div>

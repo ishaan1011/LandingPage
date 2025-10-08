@@ -78,6 +78,19 @@ All copy is directly in the component files for easy editing.
 ### Animations
 Adjust Framer Motion variants in each component file to customize animation behavior.
 
+### Waitlist Form Email Setup
+
+The waitlist form submits to Formspree and emails submissions.
+
+- Default endpoint (can be overridden with env): `https://formspree.io/f/xdkwllee`
+- To customize, set `VITE_FORMSPREE_ENDPOINT` in a `.env` file:
+
+```
+VITE_FORMSPREE_ENDPOINT=https://formspree.io/f/your_form_id
+```
+
+The form includes `_subject: "IMP FROM COMM360"` and fields: `name`, `email`, `company`, `useCase`.
+
 ## 📝 TODO
 
 - [ ] Connect waitlist form to backend/email service

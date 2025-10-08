@@ -7,19 +7,19 @@ const features = [
   {
     icon: Users,
     title: "Your AI, your voice",
-    description: "Train your AI avatar to represent you in meetings. It listens, speaks, asks questions, and ensures your perspective is heard — even when you're offline.",
+    description: "Your intelligent AI twin joins meetings on your behalf, actively listening and contributing when your expertise is needed.",
     gradient: "from-teal-500 to-emerald-500"
   },
   {
     icon: Globe,
-    title: "Speak every language",
-    description: "Real-time transcription and translation across 50+ languages. Break down barriers and collaborate effortlessly with global teams.",
+    title: "Smart Participation",
+    description: "Captures every discussion detail, speaks up with your perspective, and acts according to your priorities and style.",
     gradient: "from-emerald-500 to-sky-500"
   },
   {
     icon: Brain,
-    title: "Never forget a thing",
-    description: "Every meeting becomes searchable company memory. AI-generated summaries, action items, and insights — all in one intelligent hub.",
+    title: "Actionable Intelligence",
+    description: "Delivers crystal-clear summaries, prioritized action items, and real-time translations in over 50+ languages for global teams.",
     gradient: "from-sky-500 to-teal-500"
   }
 ];
