@@ -2,6 +2,28 @@ import { motion } from 'framer-motion';
 import { Play, ArrowRight } from 'lucide-react';
 
 const Hero = () => {
+  const handleScrollToWaitlist = () => {
+    const el = document.getElementById('waitlist');
+    if (el) {
+      el.scrollIntoView({ behavior: 'smooth' });
+    }
+    if (window.history && window.history.replaceState) {
+      const url = window.location.pathname + window.location.search;
+      window.history.replaceState(null, '', url);
+    }
+  };
+
+  const handleScrollToDemo = () => {
+    const el = document.getElementById('demo');
+    if (el) {
+      el.scrollIntoView({ behavior: 'smooth' });
+    }
+    if (window.history && window.history.replaceState) {
+      const url = window.location.pathname + window.location.search;
+      window.history.replaceState(null, '', url);
+    }
+  };
+
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden pt-16">
       {/* Animated background gradient orb */}
@@ -58,14 +80,14 @@ const Hero = () => {
             transition={{ delay: 0.6, duration: 0.8 }}
             className="flex flex-col sm:flex-row items-center justify-center gap-4"
           >
-            <a href="#waitlist" className="group px-8 py-4 bg-gradient-brand rounded-xl font-semibold text-lg hover:shadow-2xl hover:glow-strong transition-all hover:scale-105 flex items-center gap-2" role="button">
+            <button onClick={handleScrollToWaitlist} className="group px-8 py-4 bg-gradient-brand rounded-xl font-semibold text-lg hover:shadow-2xl hover:glow-strong transition-all hover:scale-105 flex items-center gap-2">
               Join the Waitlist
               <ArrowRight className="group-hover:translate-x-1 transition-transform" size={20} />
-            </a>
-            <a href="#demo" className="group px-8 py-4 bg-slate-800/50 hover:bg-slate-800 border border-slate-700 rounded-xl font-semibold text-lg transition-all flex items-center gap-2" role="button">
+            </button>
+            <button onClick={handleScrollToDemo} className="group px-8 py-4 bg-slate-800/50 hover:bg-slate-800 border border-slate-700 rounded-xl font-semibold text-lg transition-all flex items-center gap-2">
               <Play size={20} />
               Watch Demo
-            </a>
+            </button>
           </motion.div>
 
           {/* Stats or trust indicators */}
