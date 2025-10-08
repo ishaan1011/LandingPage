@@ -10,17 +10,6 @@ const Footer = () => {
       { name: 'Pricing', href: '#waitlist' },
       { name: 'Docs', href: '#' },
     ],
-    company: [
-      { name: 'About', href: '#about' },
-      { name: 'Blog', href: '#' },
-      { name: 'Careers', href: '#' },
-      { name: 'Help', href: '#' },
-    ],
-    legal: [
-      { name: 'Privacy Policy', href: '#' },
-      { name: 'Terms of Service', href: '#' },
-      { name: 'Security', href: '#' },
-    ],
   };
 
   const socialLinks = [
@@ -30,9 +19,9 @@ const Footer = () => {
   return (
     <footer className="relative border-t border-slate-800 bg-black">
       <div className="max-w-7xl mx-auto px-6 lg:px-8 py-16">
-        <div className="grid grid-cols-2 md:grid-cols-5 gap-8 mb-12">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-12 mb-12">
           {/* Logo & Description */}
-          <div className="col-span-2">
+          <div className="col-span-2 md:col-span-1">
             <a href="/" className="text-2xl font-bold text-gradient mb-4 inline-block">
               Comm360
             </a>
@@ -56,7 +45,7 @@ const Footer = () => {
           </div>
 
           {/* Product Links */}
-          <div>
+          <div className="md:justify-self-end">
             <h3 className="font-semibold text-white mb-4">Product</h3>
             <ul className="space-y-3">
               {footerLinks.product.map((link) => (
@@ -72,39 +61,7 @@ const Footer = () => {
             </ul>
           </div>
 
-          {/* Company Links */}
-          <div>
-            <h3 className="font-semibold text-white mb-4">Company</h3>
-            <ul className="space-y-3">
-              {footerLinks.company.map((link) => (
-                <li key={link.name}>
-                  <a
-                    href={link.href}
-                    className="text-slate-400 hover:text-white transition-colors"
-                  >
-                    {link.name}
-                  </a>
-                </li>
-              ))}
-            </ul>
-          </div>
-
-          {/* Legal Links */}
-          <div>
-            <h3 className="font-semibold text-white mb-4">Legal</h3>
-            <ul className="space-y-3">
-              {footerLinks.legal.map((link) => (
-                <li key={link.name}>
-                  <a
-                    href={link.href}
-                    className="text-slate-400 hover:text-white transition-colors"
-                  >
-                    {link.name}
-                  </a>
-                </li>
-              ))}
-            </ul>
-          </div>
+          
         </div>
 
         {/* Bottom Bar */}
