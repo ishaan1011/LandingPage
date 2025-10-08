@@ -49,11 +49,6 @@ const WaitlistForm = () => {
 
       setSubmitted(true);
       setFormData({ name: '', email: '', company: '', useCase: '' });
-
-      // Reset success message after 3 seconds
-      setTimeout(() => {
-        setSubmitted(false);
-      }, 3000);
     } catch (err) {
       setError('Something went wrong. Please try again.');
     }
