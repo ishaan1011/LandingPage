@@ -1,7 +1,7 @@
 import { motion } from 'framer-motion';
 import { useInView } from 'framer-motion';
 import { useRef, useState } from 'react';
-import { ArrowRight, Check } from 'lucide-react';
+import { ArrowRight, Check, ChevronDown } from 'lucide-react';
 
 const WaitlistForm = () => {
   const ref = useRef(null);
@@ -184,20 +184,23 @@ const WaitlistForm = () => {
                   <label htmlFor="useCase" className="block text-sm font-medium text-slate-300 mb-2">
                     Primary Use Case <span className="text-slate-500">(Optional)</span>
                   </label>
-                  <select
-                    id="useCase"
-                    name="useCase"
-                    value={formData.useCase}
-                    onChange={handleChange}
-                    className="w-full px-4 py-3 bg-slate-800/50 border border-slate-700 rounded-xl text-white focus:outline-none focus:ring-2 focus:ring-teal-500 focus:border-transparent transition-all"
-                  >
-                    <option value="">Select one...</option>
-                    <option value="remote-team">Remote team collaboration</option>
-                    <option value="global-meetings">Global meetings & translation</option>
-                    <option value="meeting-efficiency">Meeting efficiency</option>
-                    <option value="knowledge-management">Knowledge management</option>
-                    <option value="other">Other</option>
-                  </select>
+                  <div className="relative">
+                    <select
+                      id="useCase"
+                      name="useCase"
+                      value={formData.useCase}
+                      onChange={handleChange}
+                      className="w-full appearance-none pr-12 px-4 py-3 bg-slate-800/50 border border-slate-700 rounded-xl text-white focus:outline-none focus:ring-2 focus:ring-teal-500 focus:border-transparent transition-all"
+                    >
+                      <option value="">Select one...</option>
+                      <option value="remote-team">Remote team collaboration</option>
+                      <option value="global-meetings">Global meetings & translation</option>
+                      <option value="meeting-efficiency">Meeting efficiency</option>
+                      <option value="knowledge-management">Knowledge management</option>
+                      <option value="other">Other</option>
+                    </select>
+                    <ChevronDown size={18} className="pointer-events-none absolute right-4 top-1/2 -translate-y-1/2 text-slate-400" />
+                  </div>
                 </div>
 
                 {/* Submit Button */}
