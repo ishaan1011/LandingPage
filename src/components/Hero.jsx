@@ -62,10 +62,10 @@ const Hero = () => {
               Join the Waitlist
               <ArrowRight className="group-hover:translate-x-1 transition-transform" size={20} />
             </a>
-            <button className="group px-8 py-4 bg-slate-800/50 hover:bg-slate-800 border border-slate-700 rounded-xl font-semibold text-lg transition-all flex items-center gap-2">
+            <a href="#demo" className="group px-8 py-4 bg-slate-800/50 hover:bg-slate-800 border border-slate-700 rounded-xl font-semibold text-lg transition-all flex items-center gap-2" role="button">
               <Play size={20} />
               Watch Demo
-            </button>
+            </a>
           </motion.div>
 
           {/* Stats or trust indicators */}

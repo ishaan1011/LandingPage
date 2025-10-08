@@ -16,7 +16,7 @@ const VisualDemo = () => {
   ];
 
   return (
-    <section ref={ref} className="py-24 relative overflow-hidden">
+    <section id="demo" ref={ref} className="py-24 relative overflow-hidden">
       <div className="max-w-6xl mx-auto px-6 lg:px-8">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
